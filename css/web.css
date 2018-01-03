@@ -5,3 +5,10 @@
 .portolio-button-link:hover {
 	color: #000000;
 }
+
+.kube-control-typeface {
+	font-family: 'Shrikhand', cursive;
+	font-weight: lighter;
+	letter-spacing: 2px;
+   font-size: 2rem;
+}
