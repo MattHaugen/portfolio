@@ -17,8 +17,27 @@
 	letter-spacing: 2px;
    font-size: 2rem;
 	color: #FFF;
+	margin-top: 5px;
+}
+
+.kube-control-typeface .subhead {
+	font-size: 1rem;
+	font-weight: normal;
+	letter-spacing: normal;
+	font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.floating-button-group {
+	float: right;
+	margin-top: 5px;
 }
 
 p.secondary {
 	color: #666;
+}
+
+@media only screen and (max-width: 768px) {
+	.floating-button-group {
+		float: none;
+	}
 }
