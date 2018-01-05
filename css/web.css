@@ -6,9 +6,19 @@
 	color: #000000;
 }
 
+.ui.light-grey.segment {
+	background: #e5e5e5;
+	border-radius: .28571429rem
+}
+
 .kube-control-typeface {
 	font-family: 'Shrikhand', cursive;
 	font-weight: lighter;
 	letter-spacing: 2px;
    font-size: 2rem;
+	color: #FFF;
+}
+
+p.secondary {
+	color: #666;
 }
