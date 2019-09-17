@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
+/** @jsx jsx */
+import { jsx, css } from "@emotion/core";
+import Header from "./components/Header";
+import Content from "./components/Content";
+
+const body = css`
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+`;
+
+const container = css`
+  width: 70%;
+  display: flex;
+  margin-top: 1rem;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div css={body}>
+      <div css={container}>
+        <Header />
+        <Content />
+      </div>
     </div>
   );
 }
