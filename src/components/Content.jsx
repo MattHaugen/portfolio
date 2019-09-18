@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import ContentBlock from "./ContentBlock";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import LinkButton from "./LinkButton";
 import { faCode, faBookOpen } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -49,8 +49,16 @@ const Content = () => {
           </ul>
         </div>
         <div css={contentRow}>
-          <FontAwesomeIcon icon={faLinkedin} />
-          <FontAwesomeIcon icon={faGithub} />
+          <LinkButton
+            icon={faLinkedin}
+            text="LinkedIn"
+            url="https://www.linkedin.com/in/matthew-haugen-b162a769"
+          />
+          <LinkButton
+            icon={faGithub}
+            text="GitHub"
+            url="https://github.com/MattHaugen"
+          />
         </div>
       </ContentBlock>
       <ContentBlock title="Author" icon={faBookOpen}>

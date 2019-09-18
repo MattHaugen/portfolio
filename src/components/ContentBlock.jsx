@@ -2,6 +2,10 @@
 import { jsx, css } from "@emotion/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+const wrapper = css`
+  margin-bottom: 1rem;
+`;
+
 const titleContainer = css`
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.5rem;
@@ -28,7 +32,7 @@ const contentContainer = css`
 
 const ContentBlock = ({ title, icon, children }) => {
   return (
-    <div>
+    <div css={wrapper}>
       <div css={titleContainer}>
         <div className="title-icon">
           <FontAwesomeIcon icon={icon} />
