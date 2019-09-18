@@ -1,36 +1,46 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Trianglify from "trianglify";
 
-const wrapper = css`
-  margin-bottom: 1rem;
-`;
+const ContentBlock = ({ title, icon, palette, children }) => {
+  const pattern = Trianglify({
+    width: 1000,
+    height: 100,
+    cell_size: 15,
+    x_colors: palette
+  }).png();
+  const pattern64 = pattern.substr(pattern.indexOf("base64") + 7);
+  const patternUrl = `url(data:image/png;base64, ${pattern64})`;
 
-const titleContainer = css`
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1.5rem;
-  color: #fff;
-  display: flex;
+  const wrapper = css`
+    margin-bottom: 1rem;
+  `;
 
-  .title-icon {
-    background-color: #ff2d2d;
-    padding: 0.5rem;
-    margin-right: 0.25rem;
-  }
+  const titleContainer = css`
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1.5rem;
+    display: flex;
 
-  .title-text {
-    background-color: #0078c3;
-    padding: 0.5rem;
-    flex-grow: 1;
-  }
-`;
+    .title-icon {
+      background-color: #333;
+      padding: 0.5rem;
+      margin-right: 0.25rem;
+      color: #fff;
+    }
 
-const contentContainer = css`
-  display: flex;
-  flex-wrap: wrap;
-`;
+    .title-text {
+      background: transparent ${patternUrl};
+      padding: 0.5rem;
+      flex-grow: 1;
+    }
+  `;
 
-const ContentBlock = ({ title, icon, children }) => {
+  const contentContainer = css`
+    display: flex;
+    flex-wrap: wrap;
+  `;
+
   return (
     <div css={wrapper}>
       <div css={titleContainer}>

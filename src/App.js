@@ -11,17 +11,21 @@ const body = css`
 `;
 
 const container = css`
-  width: 70%;
+  width: 80%;
   display: flex;
   margin-top: 1rem;
 `;
 
+const gradients = ["YlGnBu", "PuBu", "BuPu", "RdPu"];
+
 function App() {
+  const palette = gradients[Math.floor(Math.random() * gradients.length)];
+
   return (
     <div css={body}>
       <div css={container}>
-        <Header />
-        <Content />
+        <Header palette={palette} />
+        <Content palette={palette} />
       </div>
     </div>
   );
