@@ -4,4 +4,4 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Pattern generation by [trianglify](https://github.com/qrohlf/trianglify).
+Pattern generation by [Trianglify](https://github.com/qrohlf/trianglify).
