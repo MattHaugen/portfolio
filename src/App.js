@@ -3,10 +3,12 @@
 import { jsx, css } from "@emotion/core";
 import Header from "./components/Header";
 import Content from "./components/Content";
+import Footer from "./components/Footer";
 
 const body = css`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const container = css`
@@ -26,6 +28,7 @@ function App() {
         <Header palette={palette} />
         <Content palette={palette} />
       </div>
+      <Footer />
     </div>
   );
 }
