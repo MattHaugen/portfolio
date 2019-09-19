@@ -22,8 +22,10 @@ const Header = ({ palette }) => {
 
     .title {
       font-family: Georgia, "Times New Roman", Times, serif;
+      font-weight: bold;
       font-size: 3rem;
-      background-color: #fff;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
       margin-bottom: 1rem;
       padding: 0.5rem 2rem 0.5rem 1rem;
     }

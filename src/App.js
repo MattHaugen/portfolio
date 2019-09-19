@@ -5,7 +5,6 @@ import Header from "./components/Header";
 import Content from "./components/Content";
 
 const body = css`
-  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
 `;

@@ -6,7 +6,6 @@ import Book from "./Book";
 import constants from "../constants";
 import { faCode, faBookOpen } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import soaringCoverUrl from "../assets/soaring.jpg";
 
 const content = css`
   flex-grow: 1;
@@ -15,6 +14,8 @@ const content = css`
 
 const contentRow = css`
   width: 100%;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 `;
 
 const bullets = css`
@@ -23,6 +24,8 @@ const bullets = css`
     list-style-type: none;
     padding-inline-start: 10px;
     margin-right: 2rem;
+    margin-bottom: 0;
+    margin-top: 0;
 
     li {
       padding-top: 3px;
@@ -39,6 +42,9 @@ const Content = ({ palette }) => {
         icon={faCode}
         palette={palette}
       >
+        <div css={contentRow}>
+          Experienced in large scale enterprise web apps. Developing since 2007.
+        </div>
         <div css={bullets}>
           <ul>
             <li>React/Redux</li>
@@ -70,9 +76,10 @@ const Content = ({ palette }) => {
       </ContentBlock>
       <ContentBlock title="Author" icon={faBookOpen} palette={palette}>
         <Book
-          title="Soaring"
-          description={constants.bookDescriptions.soaring}
-          imageUrl={soaringCoverUrl}
+          title={constants.books.soaring.title}
+          description={constants.books.soaring.description}
+          imageUrl={constants.books.soaring.image}
+          links={constants.books.soaring.links}
         />
       </ContentBlock>
     </div>
