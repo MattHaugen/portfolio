@@ -31,6 +31,7 @@ const ContentBlock = ({ title, icon, palette, children }) => {
 
     .title-text {
       background: transparent ${patternUrl};
+      transition: background 3s linear;
       padding: 0.5rem;
       flex-grow: 1;
     }

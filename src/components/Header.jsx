@@ -19,6 +19,7 @@ const Header = ({ palette }) => {
     justify-content: flex-end;
     align-items: flex-start;
     background: transparent ${patternUrl};
+    transition: background 3s linear;
 
     @media (max-width: 576px) {
       height: 300px;

@@ -1,6 +1,7 @@
 // this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
@@ -22,10 +23,20 @@ const container = css`
   }
 `;
 
-const gradients = ["YlGnBu", "PuBu", "BuPu", "RdPu"];
+const gradients = ["YlGnBu", "PuBu", "BuPu", "RdPu", "PuBuGn", "PuRd"];
 
 function App() {
-  const palette = gradients[Math.floor(Math.random() * gradients.length)];
+  const [palette, setPalette] = useState(
+    gradients[Math.floor(Math.random() * gradients.length)]
+  );
+
+  // Courtesy https://upmostly.com/tutorials/setinterval-in-react-components-using-hooks
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPalette(gradients[Math.floor(Math.random() * gradients.length)]);
+    }, 15000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div css={body}>
