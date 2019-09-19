@@ -8,9 +8,11 @@ import { faCode, faBookOpen } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const content = css`
+  width: 60%;
   flex-grow: 1;
   margin-left: 2rem;
-  @media (max-width: 576px) {
+  @media (max-width: ${constants.css.breakpoint}) {
+    width: 95%;
     margin-left: 0;
     margin-top: 2rem;
   }

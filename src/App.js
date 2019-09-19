@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
+import constants from "./constants";
 
 const body = css`
   display: flex;
@@ -16,10 +17,10 @@ const container = css`
   width: 80%;
   display: flex;
   margin-top: 1rem;
-  @media (max-width: 576px) {
+  @media (max-width: ${constants.css.breakpoint}) {
     flex-direction: column;
     align-items: center;
-    width: 95%;
+    width: 100%;
   }
 `;
 

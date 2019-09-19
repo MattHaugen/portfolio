@@ -3,6 +3,9 @@ import { faAmazon, faApple } from "@fortawesome/free-brands-svg-icons";
 import soaringCoverUrl from "./assets/soaring.jpg";
 
 const constants = {
+  css: {
+    breakpoint: "1000px"
+  },
   books: {
     soaring: {
       title: "Soaring",

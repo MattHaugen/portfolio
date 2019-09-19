@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import Trianglify from "trianglify";
+import constants from "../constants";
 
 const Header = ({ palette }) => {
   const pattern = Trianglify({
-    width: 800,
+    width: 1000,
     height: 800,
     x_colors: palette
   }).png();
@@ -13,7 +14,7 @@ const Header = ({ palette }) => {
 
   const header = css`
     height: 400px;
-    min-width: 400px;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -21,8 +22,9 @@ const Header = ({ palette }) => {
     background: transparent ${patternUrl};
     transition: background 3s linear;
 
-    @media (max-width: 576px) {
+    @media (max-width: ${constants.css.breakpoint}) {
       height: 300px;
+      width: 100%;
     }
 
     .title {
