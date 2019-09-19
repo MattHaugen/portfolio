@@ -15,6 +15,11 @@ const container = css`
   width: 80%;
   display: flex;
   margin-top: 1rem;
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+  }
 `;
 
 const gradients = ["YlGnBu", "PuBu", "BuPu", "RdPu"];

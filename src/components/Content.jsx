@@ -10,6 +10,10 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 const content = css`
   flex-grow: 1;
   margin-left: 2rem;
+  @media (max-width: 576px) {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
 `;
 
 const contentRow = css`
