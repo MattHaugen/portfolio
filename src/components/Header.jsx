@@ -20,6 +20,10 @@ const Header = ({ palette }) => {
     align-items: flex-start;
     background: transparent ${patternUrl};
 
+    @media (max-width: 576px) {
+      height: 300px;
+    }
+
     .title {
       font-family: Georgia, "Times New Roman", Times, serif;
       font-weight: bold;
